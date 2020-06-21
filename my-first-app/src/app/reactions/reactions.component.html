@@ -1,0 +1,12 @@
+<label>Server Name</label>
+<!-- <input type="text" class="form-control" (input)= "onUpdateReactionName($event)" > -->
+<!-- <input type="text" class="form-control" [(ngModel)]= "reactionName" > -->
+<input type="text" class="form-control" [(ngModel)]= "userName" >
+<!-- <p>{{ reactionName }}</p> -->
+<p>{{ userName }}</p>
+<!-- <button class="btn btn-primary" [disabled]="!allowAddingReactions" (click)="onReactionAdded()"> Add Reaction</button> -->
+<button class="btn btn-primary" [disabled]="!ifButtonEnabled()" (click)="onUserNameAdded()"> Add UserName</button>
+<p>{{ reactionStatus }}</p>
+<app-warning></app-warning>
+<app-success></app-success>
+<!-- <app-success></app-success> -->
