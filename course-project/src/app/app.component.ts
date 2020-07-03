@@ -1,16 +1,14 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from "@angular/core";
+import { AuthUserService } from "./auth/auth.service";
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  selector: "app-root",
+  templateUrl: "./app.component.html",
+  styleUrls: ["./app.component.css"]
 })
-export class AppComponent {
-  indexToShow:number = 0;
-
-  onSelectingHeader(selectedIndex:number){
-    console.log(selectedIndex);
-    this.indexToShow = selectedIndex;
+export class AppComponent implements OnInit {
+  constructor(private authService: AuthUserService) {}
+  ngOnInit() {
+    this.authService.autoLogin();
   }
-
 }

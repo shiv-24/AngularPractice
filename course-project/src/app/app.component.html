@@ -1,10 +1,11 @@
-<app-header (selectedComponentIndex)="onSelectingHeader($event)"></app-header>
-
+<!-- <app-header (selectedComponentIndex)="onSelectingHeader($event)"></app-header> -->
+<app-header></app-header>
 <div class="container">
   <div class="row">
     <div class="col-md-12">
-      <app-recipes *ngIf = "indexToShow===0"></app-recipes>
-      <app-shopping-list *ngIf = "indexToShow===1"></app-shopping-list>
+      <!-- <app-recipes *ngIf = "indexToShow===0"></app-recipes>
+      <app-shopping-list *ngIf = "indexToShow===1"></app-shopping-list> -->
+      <router-outlet></router-outlet>
     </div>
   </div>
 
